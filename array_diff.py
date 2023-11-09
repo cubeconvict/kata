@@ -12,7 +12,7 @@ array_diff([1,2,2,2,3],[2]) == [1,3]
 '''
 
 def array_diff(original_array, query_array):
-    '''Remove all values from original_arry, which are present in query_array, keeping their order'''
+    '''Remove all values from original_array, which are present in query_array, keeping their order'''
 
     # Exit early if either array is empty
     if not original_array or not query_array:
