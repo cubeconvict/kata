@@ -23,25 +23,27 @@ pop_array = [1, 2]
 def array_diff(original_array,query_array):
     #initiate an empty array
     new_array = []
-    i = 0
     if query_array == [] or original_array == []:
         return original_array
     else:
+        for x in original_array:
+             #check to see if is in list 2 by iterating through list 2          
+            if x not in query_array:
+                new_array.append(x)
+
+        '''
         for y in query_array:
              #check to see if is in list 2 by iterating through list 2 with equality          
             for x in original_array:
                 #if it is in there, pop it
-                # cant use if x != y because you'll 
                 if x not in query_array and y not in new_array:
                     new_array.append(x)
-
+        '''    
     return new_array 
     
-
 assert(array_diff(test_array1, pop1) == [2])
 assert(array_diff(test_array2, pop1) == [2,2])
 assert(array_diff(test_array2, pop2) == [1])
 assert(array_diff(test_array2, []) == [1,2,2])
 assert(array_diff([], test_array1) == [])
 assert(array_diff(test_array4, pop_array) == [3])
-
