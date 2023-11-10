@@ -38,10 +38,10 @@ def array_diff(original_array,query_array):
     return new_array 
     
 
-print(array_diff(test_array1,pop1), ' should be [2]')
-print(array_diff(test_array2,pop1), " expected [2,2]")
-print(array_diff(test_array2,pop2), " expected [1]")
-print(array_diff(test_array2,[]), " expected [1,2,2]")
-print(array_diff([],test_array1), " expected []")
-print(array_diff(test_array4,pop_array), " expected [3]")
+assert(array_diff(test_array1, pop1) == [2])
+assert(array_diff(test_array2, pop1) == [2,2])
+assert(array_diff(test_array2, pop2) == [1])
+assert(array_diff(test_array2, []) == [1,2,2])
+assert(array_diff([], test_array1) == [])
+assert(array_diff(test_array4, pop_array) == [3])
 
